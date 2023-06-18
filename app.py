@@ -3,10 +3,9 @@
 from flask import (Flask, render_template,request)
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='static/templates',static_url_path="", static_folder="")
 app.debug = True
 app.title = 'MAPA INTERACTIVO'
-
 
 @app.route('/', methods=('GET', 'POST'))
 def mapainteractivo():
